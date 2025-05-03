@@ -65,7 +65,7 @@
           },
           {
             "operation": "multi_term_agg",
-            "warmup-time-period":  {{ search_warmup_time | default(0) }},
+            "warmup-iterations":  {{ search_warmup_iterations | default(0) }},
             "iterations": {{ search_iterations | default(100) }},
             "clients": {{ search_clients | default(1) }}
           }
