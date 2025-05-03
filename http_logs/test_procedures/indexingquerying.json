@@ -59,12 +59,13 @@
                 "bulk-size": {{bulk_size | default(5000)}},
                 "ingest-percentage": {{100 - (initial_ingest_percentage | default(50))}}
               },
+              "warmup-time-period": {{ index_warmup_time | default(0) }},
               "clients": {{bulk_indexing_clients | default(8)}},
               "ignore-response-error-level": "{{error_level | default('non-fatal')}}"
           },
           {
             "operation": "multi_term_agg",
-            "warmup-iterations":  {{ warmup_iterations | default(0) }},
+            "warmup-time-period":  {{ search_warmup_time | default(0) }},
             "iterations": {{ search_iterations | default(100) }},
             "clients": {{ search_clients | default(1) }}
           }
