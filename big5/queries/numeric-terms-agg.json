@@ -1,0 +1,11 @@
+{
+  "size": 0,
+  "aggs": {
+    "contentIds": {
+      "terms": {
+        "field": "contentId2",
+        "size": 100000
+      }
+    }
+  }
+}
