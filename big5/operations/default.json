@@ -987,4 +987,19 @@
           }
         ]
       }
+    },
+    {
+      "name": "numeric-terms-agg",
+      "operation-type": "search",
+      "index": "{{index_name | default('big5')}}",
+      "body": {
+        "aggs": {
+          "urlids": {
+            "terms": {
+              "field": "url_id",
+              "size": 10000
+            }
+          }
+        }
+      }
     }
