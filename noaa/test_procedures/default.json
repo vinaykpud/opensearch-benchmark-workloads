@@ -465,6 +465,13 @@
           "warmup-iterations": 10,
           "iterations": 50,
           "target-interval": 7
+        },
+        {
+          "operation": "numeric-terms-agg",
+          "clients": 1,
+          "warmup-iterations": 10,
+          "iterations": 100,
+          "target-interval": 2
         }
       ]
     }

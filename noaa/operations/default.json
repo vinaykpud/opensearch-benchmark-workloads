@@ -1363,4 +1363,19 @@
           }
         }
       }
+    },
+    {
+      "name": "numeric-terms-agg",
+      "operation-type": "search",
+      "body": {
+          "aggs": {
+            "urlids": {
+              "elevations": {
+                "field": "station.elevation",
+                "size": 8000
+              }
+            }
+          }
+        }
     }
+
