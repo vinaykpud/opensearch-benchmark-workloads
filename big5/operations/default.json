@@ -997,7 +997,7 @@
           "urlids": {
             "terms": {
               "field": "url_id",
-              "size": 10000
+              "size": 100000
             }
           }
         }
